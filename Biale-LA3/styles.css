@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode #about,
+body.dark-mode #projects article,
+body.dark-mode #contact,
+body.dark-mode form {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-style: italic;
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: #ff9800;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Navigation menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Mobile navigation toggle button (hidden on desktop) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+/* About Section */
+#about {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+/* Projects Section with CSS Grid */
+#projects {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#projects article {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Grid for Desktop */
+@media (min-width: 768px) {
+    #projects {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+/* Contact form styling */
+form {
+    margin-top: 1rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff9800;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #444;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #dark-mode-toggle {
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.9rem;
+    }
+}

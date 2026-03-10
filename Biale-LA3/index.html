@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Johnmark V. Biale</h1>
+        <p>Aspiring Web Developer | Passionate About Technology</p>
+        <!-- Dark mode toggle button -->
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        <!-- Mobile navigation toggle button (hamburger) -->
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate and detail-oriented software developer with a background in web development and database management. I have experience working with HTML, CSS, JavaScript, and PHP, and I enjoy building responsive and user-friendly applications. My interests include learning new programming frameworks, improving system efficiency, and exploring emerging technologies like AI and automation.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Project 1 – Visitor Log System</h3>
+                <p>A web-based application designed to streamline visitor management in offices and schools. It allows digital check-ins, automatic time tracking, and generates reports to improve security and organization.</p>
+            </article>
+            <article>
+                <h3>Project 2 – Personal Portfolio Website</h3>
+                <p>A responsive portfolio website that showcases my skills, projects, and achievements. Built with HTML, CSS, and JavaScript, it includes interactive elements and a contact form for potential clients or employers.</p>
+            </article>
+            <article>
+                <h3>Project 3 – Task Management App</h3>
+                <p>A simple task management web application to help users organize daily tasks. Features include task creation, editing, deletion, and categorization to enhance productivity and workflow efficiency.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: mjjohnmarkbiale@gmail.com</p>
+            <p>Phone: 0994-886-8284</p>
+            <p>Social Media: <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+
+            <!-- New contact form with validation -->
+            <h3>Send me a message</h3>
+            <form id="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit">Send</button>
+                <p id="form-error" class="error-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Johnmark V. Biale</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
